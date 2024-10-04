@@ -17,7 +17,7 @@ public class LaptopService {
     private JPAStreamer jpaStreamer;
 
     public List<Laptop> recommendLaptops(double budget) {
-        // Use JPAStreamer to filter laptops based on the budget
+
         return jpaStreamer.stream(Laptop.class)
                 .filter(laptop -> laptop.getPrice() <= budget)
                 .collect(Collectors.toList());
@@ -31,7 +31,7 @@ public class LaptopService {
                 .filter(laptop -> laptop.getStorage().equalsIgnoreCase(storage))
                 .collect(Collectors.toList());
 
-        // Return "Not found" if no laptops match the criteria
+
         if (laptops.isEmpty()) {
             System.out.println("No laptops found matching the given criteria.");
         }
