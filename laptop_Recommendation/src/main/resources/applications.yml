@@ -1,0 +1,15 @@
+server:
+  port: 2238
+spring:
+  application:
+    name: laptop_Recommendation
+  datasource:
+    url: jdbc:mysql://localhost:3306/LaptopRecommendation
+    username: root
+    password: tiger
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
